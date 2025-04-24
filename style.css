@@ -1,0 +1,154 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+/* Resetando alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fundo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4ff; /* Cor de fundo azul claro */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Título */
+h1 {
+    color: #0066cc; /* Cor do título em azul escuro */
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Container principal (formulário dentro da "caixa") */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Bordas arredondadas */
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo dos inputs e selects */
+input, select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre os inputs */
+input:hover, select:hover {
+    border-color: #0066cc; /* Borda azul ao passar o mouse */
+    background-color: #ffffff; /* Fundo branco ao passar o mouse */
+}
+
+/* Foco nos inputs */
+input:focus, select:focus {
+    border-color: #0066cc; /* Borda azul quando o input estiver em foco */
+    background-color: #eaf4ff; /* Fundo levemente azul ao focar */
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 102, 204, 0.4); /* Sombra azul suave */
+}
+
+/* Estilo dos botões */
+button {
+    padding: 12px 20px;
+    background-color: #0066cc; /* Botão azul */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover nos botões */
+button:hover {
+    background-color: #004d99; /* Azul escuro no hover */
+}
+
+/* Lista de vagas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Vagas disponíveis */
+.available {
+    background-color: #e0f7e0;
+}
+
+/* Estilo da tabela de listar.html */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+th {
+    background-color: #0066cc;
+    color: white;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Corpo da tabela */
+td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para a última linha */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Efeito de hover nas linhas */
+tr:hover {
+    background-color: #f5faff;
+}
+
+/* Estilo das colunas */
+td, th {
+    border-left: 1px solid #ddd;
+}
+
+/* Remover a borda à esquerda da primeira coluna */
+th:first-child, td:first-child {
+    border-left: none;
+}

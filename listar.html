@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Vagas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Vagas Cadastradas</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Placa</th>
+        <th>Proprietário</th>
+        <th>Apartamento</th>
+        <th>Bloco</th>
+        <th>Modelo</th>
+        <th>Cor</th>
+        <th>Vaga</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody id="tabelaVagas">
+      <!-- Vagas serão inseridas aqui -->
+    </tbody>
+  </table>
+
+  <script>
+    // Simula vagas cadastradas (já que não temos banco de dados)
+    const vagas = [
+      {
+        placa: 'ABC-1234',
+        proprietario: 'João Silva',
+        apartamento: '101',
+        bloco: 'A',
+        modelo: 'Civic',
+        cor: 'Preto',
+        vaga: '01'
+      },
+      {
+        placa: 'XYZ-9876',
+        proprietario: 'Maria Souza',
+        apartamento: '202',
+        bloco: 'B',
+        modelo: 'Corolla',
+        cor: 'Branco',
+        vaga: '02'
+      }
+    ];
+00 
+    const tabela = document.getElementById('tabelaVagas');
+    vagas.forEach((vaga, index) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${vaga.placa}</td>
+        <td>${vaga.proprietario}</td>
+        <td>${vaga.apartamento}</td>
+        <td>${vaga.bloco}</td>
+        <td>${vaga.modelo}</td>
+        <td>${vaga.cor}</td>
+        <td>${vaga.vaga}</td>
+        <td><button onclick="remover(${index})">Remover</button></td>
+      `;
+      tabela.appendChild(row);
+    });
+
+    function remover(index) {
+      alert('Vaga removida com sucesso!');
+      // Isso só simula a ação
+    }
+  </script>
+</body>
+</html>
